@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://github.com/dioselyn/lazy-load/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-security-policy" content="upgrade-insecure-requests">
+    <meta
+      name="description"
+      content="Web site created using create-snowpack-app"
+    />
+    <!--
+      Snowpack will replace https://github.com/dioselyn/lazy-load/ with the value you have for `baseUrl` in `snowpack.config.js`.
+      Make sure to update it with your GitHub Page URL. https://<your-username>.github.io/<your-repo-name>
+
+      More about config options:
+      - https://www.snowpack.dev/reference/configuration#buildoptions.baseurl
+    -->
+    <link rel="stylesheet" type="text/css" href="https://github.com/dioselyn/lazy-load/_dist_/css/index.css"/>
+    <title>Snowpack & Tailwind App</title>
+  </head>
+  <body>
+    <!--
+      This HTML file is a template.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+
+      Start modyfing from here.
+    -->
+    <div class="py-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <p
+          class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
+        >
+          DIOSELYN COLINA
+        </p>
+        <h3
+          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+        >
+          Lazy Loading
+        </h3>
+        <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
+          Vanilla JS plugin to load images with Lazy Load.<br>
+          ✨<br>
+          The images doesn't be downloaded until that be visible in the screen<br>
+          ✨
+        </p>
+        <label class="mt-4 max-w-2xl text-l leading-3 text-gray-400 mx-auto">Adds new image to the bellow of the list</label>
+        <div>
+        <button id="addImage" class="p-3 bg-blue-500 hover:bg-blue-700 text-white my-10  rounded">Add Image</button>
+        <button id="cleanImage" class="p-3 text-blue-700 my-5 ml-10 rounded">Clear</button>
+        </div>
+        
+        
+        <div id="images">
+
+        </div>
+      </div>
+    </div>
+
+   
+  </body>
+  <footer class="text-center mt-48 p-6 text-sm text-gray-500">
+      <p>
+        Powered by
+        <a href="https://randomfox.ca" target="_blank">https://randomfox.ca</a>
+        | Made by <a href="https://github.com/dioselyn">@dioselyn</a>
+        | Teacher: Jhonathan Alvarez | Platzi
+      </p>
+
+
+      <!-- Add more scripts here -->
+    <script>
+      let appendedImages = 0;
+      let loadedImages = 0;
+  
+      const printLog = () => {
+      console.log(`⚪ Have been added ${appendedImages} images`);
+      console.log(`🟣 Have been charged ${loadedImages} images`);
+      console.log("---------------------------------------");
+      }
+    </script>
+    <script type="module" src="https://github.com/dioselyn/lazy-load/_dist_/js/index.js"></script>
+    </footer>
+</html>
