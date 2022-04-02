@@ -5,6 +5,6 @@ module.exports = {
     src: '/_dist_',
   },
   buildOptions: {
-    baseUrl: 'https://github.com/dioselyn/lazy-load',
+    baseUrl: 'https://dioselyn.github.io/lazy-load',
   },
 }
