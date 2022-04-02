@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-security-policy" content="upgrade-insecure-requests">
     <meta
       name="description"
       content="Web site created using create-snowpack-app"
@@ -15,11 +16,7 @@
       More about config options:
       - https://www.snowpack.dev/reference/configuration#buildoptions.baseurl
     -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="%PUBLIC_URL%/_dist_/index.css"
-    />
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/_dist_/css/index.css"/>
     <title>Snowpack & Tailwind App</title>
   </head>
   <body>
@@ -36,52 +33,54 @@
         <p
           class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
         >
-          Snowpack
+          DIOSELYN COLINA
         </p>
         <h3
           class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
         >
-          Tailwind template
+          Lazy Loading
         </h3>
         <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
-          Use this template to build awesome websites using Snowpack and
-          Tailwind. It also includes Prettier and automatic publish to GitHub
-          pages using GitHub Actions. Learn more:
+          Vanilla JS plugin to load images with Lazy Load.<br>
+          ✨<br>
+          The images doesn't be downloaded until that be visible in the screen<br>
+          ✨
         </p>
-        <ul
-          class="text-xl leading-7 sm:flex justify-around sm:max-w-2xl sm:mx-auto mt-10"
-        >
-          <li class="my-4 p-4 px-6 bg-gray-300 hover:bg-gray-500">
-            <a href="https://snowpack.dev" target="_blank">snowpack.dev</a>
-          </li>
-          <li class="my-4 p-4 px-6 bg-gray-300 hover:bg-gray-500">
-            <a href="https://tailwindcss.com" target="_blank"
-              >tailwindcss.com</a
-            >
-          </li>
-          <li class="my-4 p-4 px-6 bg-gray-300 hover:bg-gray-500">
-            <a
-              href="https://docs.github.com/en/free-pro-team@latest/actions"
-              target="_blank"
-              >GitHub Actions</a
-            >
-          </li>
-        </ul>
-        <p class="mt-14 text-xl leading-7 text-gray-500">Start using it:</p>
-        <div class="my-5 bg-gray-800 p-5 text-white">
-          <code>
-            npx create-snowpack-app my-app --template snowpack-template-tailwind
-          </code>
+        <label class="mt-4 max-w-2xl text-l leading-3 text-gray-400 mx-auto">Adds new image to the bellow of the list</label>
+        <div>
+        <button id="addImage" class="p-3 bg-blue-500 hover:bg-blue-700 text-white my-10  rounded">Add Image</button>
+        <button id="cleanImage" class="p-3 text-blue-700 my-5 ml-10 rounded">Clear</button>
         </div>
-        <p class="mt-16 text-xl leading-7 text-gray-500 underline">
-          <a href="https://github.com/jonalvarezz/snowpack-template-tailwind"
-            >See on GitHub</a
-          >
-        </p>
+        
+        
+        <div id="images">
+
+        </div>
       </div>
     </div>
 
-    <!-- Add more scripts here -->
-    <script type="module" src="%PUBLIC_URL%/_dist_/index.js"></script>
+   
   </body>
+  <footer class="text-center mt-48 p-6 text-sm text-gray-500">
+      <p>
+        Powered by
+        <a href="https://randomfox.ca" target="_blank">https://randomfox.ca</a>
+        | Made by <a href="https://github.com/dioselyn">@dioselyn</a>
+        | Teacher: Jhonathan Alvarez | Platzi
+      </p>
+
+
+      <!-- Add more scripts here -->
+    <script>
+      let appendedImages = 0;
+      let loadedImages = 0;
+  
+      const printLog = () => {
+      console.log(`⚪ Have been added ${appendedImages} images`);
+      console.log(`🟣 Have been charged ${loadedImages} images`);
+      console.log("---------------------------------------");
+      }
+    </script>
+    <script type="module" src="%PUBLIC_URL%/_dist_/js/index.js"></script>
+    </footer>
 </html>

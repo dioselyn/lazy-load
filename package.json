@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/dioselyn/lazy-load",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
